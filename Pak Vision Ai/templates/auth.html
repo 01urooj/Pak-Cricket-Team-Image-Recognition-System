@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Image Recognition System</title>
+
+    <!-- Auth CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/auth.css') }}">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- =========================================
+         LEFT SIDE
+    ========================================== -->
+
+    <div class="left">
+
+        <div class="brand-content">
+
+            <h1>
+                🏏 Image Recognition System
+            </h1>
+
+            <h2>
+                Pakistan Cricket Player Recognition
+            </h2>
+
+            <p>
+                Artificial Intelligence Based Player Recognition System
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         RIGHT SIDE
+    ========================================== -->
+
+    <div class="right">
+
+        <div class="auth-area">
+
+
+            <!-- =================================
+                 LOGIN / REGISTER FORM
+            ================================== -->
+
+            <div class="form-box">
+
+                <!-- Login / Register Buttons -->
+
+                <div class="buttons">
+
+                    <button
+                        type="button"
+                        id="loginBtn"
+                        class="active">
+
+                        Login
+
+                    </button>
+
+                    <button
+                        type="button"
+                        id="registerBtn">
+
+                        Register
+
+                    </button>
+
+                </div>
+
+
+                <!-- =================================
+                     LOGIN FORM
+                ================================== -->
+
+                <form
+                    id="loginForm"
+                    action="/login"
+                    method="POST">
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        required>
+
+
+                    <div class="password">
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            name="password"
+                            placeholder="Password"
+                            required>
+
+                        <i
+                            class="fa-solid fa-eye"
+                            onclick="togglePassword('loginPassword', this)">
+                        </i>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit">
+
+                        Login
+
+                    </button>
+
+                </form>
+
+
+                <!-- =================================
+                     REGISTER FORM
+                ================================== -->
+
+                <form
+                    id="registerForm"
+                    action="/register"
+                    method="POST"
+                    style="display: none;">
+
+                    <input
+                        type="text"
+                        name="fullname"
+                        placeholder="Full Name"
+                        required>
+
+
+                    <input
+                        type="text"
+                        name="username"
+                        placeholder="Username"
+                        required>
+
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        required>
+
+
+                    <div class="password">
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            name="password"
+                            placeholder="Password"
+                            required>
+
+                        <i
+                            class="fa-solid fa-eye"
+                            onclick="togglePassword('registerPassword', this)">
+                        </i>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit">
+
+                        Create Account
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- =================================
+                 THEME TOGGLE
+                 FORM KE BAHAR
+            ================================== -->
+
+            <div class="theme-toggle">
+
+                <span class="theme-text">
+                    🌙 Dark Mode
+                </span>
+
+                <label class="switch">
+
+                    <input
+                        type="checkbox"
+                        id="themeToggle">
+
+                    <span class="slider"></span>
+
+                </label>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================
+     AUTH JAVASCRIPT
+========================================== -->
+
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Players | PakVision AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/players.css') }}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+          <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/theme.css') }}">
+
+<script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- TOP BAR -->
+
+    <div class="topbar">
+
+        <a href="/dashboard" class="back">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back To Dashboard
+        </a>
+
+        <h1>Pakistan Players</h1>
+
+    </div>
+
+
+    <!-- PAGE INTRO -->
+
+    <div class="page-intro">
+
+        <h2>Players Database</h2>
+
+        <p>
+            View all Pakistan cricket players detected by PakVision AI.
+        </p>
+
+    </div>
+
+
+    <!-- PLAYERS GRID -->
+
+    <div class="players-grid">
+
+        {% for player in players %}
+
+        <div class="player-card">
+
+            <!-- PLAYER ICON -->
+
+            <div class="player-icon">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+
+            <!-- PLAYER INFO -->
+
+            <div class="player-info">
+
+                <h2>
+                    {{ player["player_name"] }}
+                </h2>
+
+                <p class="role">
+                    {{ player["role"] }}
+                </p>
+
+
+                <div class="info-row">
+
+                    <span>
+                        <i class="fa-solid fa-cake-candles"></i>
+                        Age
+                    </span>
+
+                    <strong>
+                        {{ player["age"] if player["age"] else "N/A" }}
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        City
+                    </span>
+
+                    <strong>
+                        {{ player["city"] if player["city"] else "N/A" }}
+                    </strong>
+
+                </div>
+
+
+                <div class="info-row">
+
+                    <span>
+                        <i class="fa-solid fa-camera"></i>
+                        Total Scans
+                    </span>
+
+                    <strong>
+                        {{ player["total_scans"] }}
+                    </strong>
+
+                </div>
+
+
+                <div class="last-scan">
+
+                    Last Scan:
+                    {{ player["last_scan"] }}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% else %}
+
+        <div class="empty">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h2>No Players Found</h2>
+
+            <p>
+                Scan a player first to add them to the players database.
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+
+
+</body>
+</html>

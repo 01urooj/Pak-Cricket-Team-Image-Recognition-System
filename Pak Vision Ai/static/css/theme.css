@@ -1,0 +1,165 @@
+/* =========================================
+   PAKVISION AI - GLOBAL THEME
+   ========================================= */
+
+:root {
+    --bg-color: #061c17;
+    --card-color: #0c2b22;
+    --card-secondary: #09241d;
+
+    --text-color: #ffffff;
+    --muted-color: #8fa9a1;
+
+    --border-color: rgba(0, 255, 153, 0.25);
+
+    --primary-color: #00ff99;
+}
+
+
+/* =========================================
+   LIGHT MODE
+   ========================================= */
+
+html.light-mode {
+
+    --bg-color: #f2f7f5;
+    --card-color: #ffffff;
+    --card-secondary: #f7faf9;
+
+    --text-color: #14231f;
+    --muted-color: #66756f;
+
+    --border-color: #c9ddd6;
+
+    --primary-color: #00a86b;
+}
+
+
+/* =========================================
+   GLOBAL BODY
+   ========================================= */
+
+html,
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/* =========================================
+   COMMON CARDS / BOXES
+   ========================================= */
+
+.card,
+.panel,
+.box,
+.card-box,
+.stat-card,
+.chart-card,
+.table-box,
+.player-card,
+.info-card,
+.form-card,
+.option-card,
+.settings-sidebar,
+.settings-content {
+    background-color: var(--card-color);
+    color: var(--text-color);
+
+    border-color: var(--border-color);
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* =========================================
+   TEXT
+   ========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-color);
+}
+
+p {
+    color: var(--muted-color);
+}
+
+
+/* =========================================
+   INPUTS
+   ========================================= */
+
+input,
+select,
+textarea {
+    background-color: var(--card-secondary);
+    color: var(--text-color);
+
+    border: 1px solid var(--border-color);
+}
+
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+a {
+    color: var(--primary-color);
+}
+
+
+/* =========================================
+   TABLE
+   ========================================= */
+
+table {
+    color: var(--text-color);
+}
+
+td {
+    border-color: var(--border-color);
+}
+
+
+/* =========================================
+   LIGHT MODE BODY
+   ========================================= */
+
+html.light-mode body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+/* =========================================
+   SMOOTH TRANSITION
+   ========================================= */
+
+body,
+.card,
+.panel,
+.box,
+.table-box,
+.player-card,
+.settings-sidebar,
+.settings-content,
+input,
+select,
+textarea {
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}

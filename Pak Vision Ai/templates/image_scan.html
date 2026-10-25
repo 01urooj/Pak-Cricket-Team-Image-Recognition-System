@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Image Scan | PakVision AI</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/image_scan.css') }}">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/theme.css') }}">
+
+      <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="topbar">
+
+<a href="/dashboard" class="back">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Back To Dashboard
+
+</a>
+
+<h1>
+
+AI Image Scanner
+
+</h1>
+
+</div>
+
+
+<div class="grid">
+
+<!-- LEFT -->
+
+<div class="left">
+
+<div class="card">
+
+<h2>
+
+Upload Image
+
+</h2>
+
+<div class="upload-box">
+
+<input
+type="file"
+id="imageInput"
+accept="image/*"
+hidden>
+
+
+
+</p>
+
+<button
+onclick="document.getElementById('imageInput').click()">
+
+Browse Image
+
+</button>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+
+Image Preview
+
+</h2>
+
+<div class="preview">
+
+<img
+id="previewImage">
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT -->
+
+<div class="right">
+
+<div class="card">
+
+<h2>
+
+Prediction Result
+
+</h2>
+
+<div class="player-icon">
+
+🏏
+
+</div>
+
+<h3 id="playerName">
+
+No Image Selected
+
+</h3>
+
+<p id="confidence">
+
+Confidence : 0%
+
+</p>
+
+<div class="progress">
+
+<div id="progressBar"></div>
+
+</div>
+
+<button id="scanBtn">
+
+Scan Image
+
+</button>
+
+</div>
+
+
+<div class="card">
+
+<h2>
+
+Player Information
+
+</h2>
+
+<div class="info">
+
+    <div>
+        <b>Name</b>
+        <p id="name">--</p>
+    </div>
+
+    <div>
+        <b>Role</b>
+        <p id="role">--</p>
+    </div>
+
+    <div>
+        <b>Age</b>
+        <p id="age">--</p>
+    </div>
+
+    <div>
+        <b>City</b>
+        <p id="city">--</p>
+    </div>
+
+    <div>
+        <b>Country</b>
+        <p>Pakistan</p>
+    </div>
+
+    <div>
+        <b>Accuracy</b>
+        <p id="accuracy">0%</p>
+    </div>
+
+</div>
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/image_scan.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #061c14;
+    color: white;
+    min-height: 100vh;
+}
+
+.container {
+    width: 96%;
+    margin: auto;
+    padding: 25px 0 50px;
+}
+
+
+/* ===============================
+   TOP BAR
+================================ */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(0, 255, 153, .15);
+
+    margin-bottom: 30px;
+}
+
+.back {
+    text-decoration: none;
+    color: #00ff99;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.back i {
+    margin-right: 6px;
+}
+
+.topbar h1 {
+    color: #00ff99;
+    font-size: 28px;
+}
+
+
+/* ===============================
+   INTRO
+================================ */
+
+.page-intro {
+    margin-bottom: 30px;
+}
+
+.page-intro h2 {
+    color: #00ff99;
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+
+.page-intro p {
+    color: #a9bdb5;
+    font-size: 14px;
+}
+
+
+/* ===============================
+   PLAYERS GRID
+================================ */
+
+.players-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 22px;
+}
+
+
+/* ===============================
+   PLAYER CARD
+================================ */
+
+.player-card {
+
+    background: #102d22;
+
+    border: 1px solid rgba(0, 255, 153, .18);
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+    display: flex;
+    gap: 20px;
+
+    transition: .3s;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .20);
+}
+
+.player-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #00ff99;
+
+    box-shadow:
+        0 15px 35px rgba(0, 255, 153, .12);
+}
+
+
+/* ===============================
+   PLAYER ICON
+================================ */
+
+.player-icon {
+
+    min-width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+
+    background: #00ff99;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #062017;
+
+    font-size: 32px;
+}
+
+
+/* ===============================
+   PLAYER INFO
+================================ */
+
+.player-info {
+    flex: 1;
+}
+
+.player-info h2 {
+
+    color: white;
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.role {
+
+    color: #00ff99;
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ===============================
+   INFO ROW
+================================ */
+
+.info-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 9px 0;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, .06);
+
+    font-size: 13px;
+}
+
+.info-row span {
+
+    color: #a9bdb5;
+}
+
+.info-row i {
+
+    color: #00ff99;
+
+    width: 20px;
+}
+
+.info-row strong {
+
+    color: white;
+
+    font-weight: 500;
+}
+
+
+/* ===============================
+   LAST SCAN
+================================ */
+
+.last-scan {
+
+    margin-top: 15px;
+
+    color: #7e998f;
+
+    font-size: 11px;
+}
+
+
+/* ===============================
+   EMPTY
+================================ */
+
+.empty {
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background: #102d22;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(0, 255, 153, .15);
+}
+
+.empty i {
+
+    font-size: 60px;
+
+    color: #00ff99;
+
+    margin-bottom: 20px;
+}
+
+.empty h2 {
+
+    margin-bottom: 10px;
+}
+
+.empty p {
+
+    color: #8da69c;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 600px) {
+
+    .topbar h1 {
+        font-size: 20px;
+    }
+
+    .player-card {
+        padding: 18px;
+    }
+
+    .player-icon {
+        min-width: 60px;
+        height: 60px;
+        font-size: 25px;
+    }
+
+    .player-info h2 {
+        font-size: 17px;
+    }
+}

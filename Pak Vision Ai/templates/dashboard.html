@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PakVision AI | Dashboard</title>
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+    
+  
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+ <!-- Theme CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/theme.css') }}">
+
+        <!-- Theme JS -->
+
+<script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+  
+
+
+
+
+
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard">
+
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>🏏 Image Recognition System</h2>
+
+            <p>Recognition System</p>
+
+        </div>
+
+
+        <ul class="sidebar-menu">
+
+            <li class="active">
+
+                <a href="/dashboard">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="/image_scan">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                    <span>Image Scan</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="/history">
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    <span>History</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="/statistics">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    <span>Statistics</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="/players">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span>Players</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="/project-info">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <span>Project Info</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="/settings">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span>Settings</span>
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="/logout">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>Logout</span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main class="main">
+
+
+        <!-- TOP HEADER -->
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Dashboard</h1>
+
+                <p>Welcome back, {{ user }} 👋</p>
+
+            </div>
+
+
+            <a href="/image_scan" class="new-scan-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Start New Scan
+
+            </a>
+
+        </div>
+
+
+
+        <!-- =====================================
+             AI READY HERO
+        ====================================== -->
+
+        <section class="hero-card">
+
+
+            <div class="hero-content">
+
+                <div class="ai-status">
+
+                    <span class="status-dot"></span>
+
+                    AI READY
+
+                </div>
+
+
+                
+
+
+                <p>
+                    Pakistan Cricket Player Recognition System
+                </p>
+
+
+                <small>
+                    Analyze Pakistani cricket players using Artificial Intelligence.
+                </small>
+
+            </div>
+
+
+           
+
+
+        </section>
+
+
+
+        
+
+               
+
+
+
+           
+            
+
+
+        <!-- =====================================
+             QUICK ACTIONS
+        ====================================== -->
+
+        <section class="quick-section">
+
+
+            <div class="section-heading">
+
+                <h2>Quick Actions</h2>
+
+                <p>
+                    Quickly access PakVision AI features
+                </p>
+
+            </div>
+
+
+
+            <div class="quick-grid">
+
+
+                <!-- IMAGE SCAN -->
+
+                <a href="/image_scan" class="quick-card">
+
+                    <div class="quick-icon green">
+
+                        <i class="fa-solid fa-camera"></i>
+
+                    </div>
+
+
+                    <div class="quick-content">
+
+                        <h3>Image Scan</h3>
+
+                        <p>
+                            Identify a cricket player
+                        </p>
+
+                    </div>
+
+
+                    <span class="quick-arrow">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+
+                <!-- HISTORY -->
+
+                <a href="/history" class="quick-card">
+
+                    <div class="quick-icon blue">
+
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    </div>
+
+
+                    <div class="quick-content">
+
+                        <h3>History</h3>
+
+                        <p>
+                            View previous scans
+                        </p>
+
+                    </div>
+
+
+                    <span class="quick-arrow">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+
+                <!-- STATISTICS -->
+
+                <a href="/statistics" class="quick-card">
+
+                    <div class="quick-icon orange">
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                    </div>
+
+
+                    <div class="quick-content">
+
+                        <h3>Statistics</h3>
+
+                        <p>
+                            Analyze scan performance
+                        </p>
+
+                    </div>
+
+
+                    <span class="quick-arrow">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+
+                <!-- PLAYERS -->
+
+                <a href="/players" class="quick-card">
+
+                    <div class="quick-icon purple">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+
+                    <div class="quick-content">
+
+                        <h3>Players</h3>
+
+                        <p>
+                            Explore player database
+                        </p>
+
+                    </div>
+
+
+                    <span class="quick-arrow">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             AI SYSTEM STATUS
+        ====================================== -->
+
+        <section class="system-status">
+
+
+            <div class="system-status-icon">
+
+                <i class="fa-solid fa-microchip"></i>
+
+            </div>
+
+
+            <div>
+
+                <h3>AI Recognition System</h3>
+
+                <p>
+                    PakVision AI is ready to analyze cricket player images.
+                </p>
+
+            </div>
+
+
+           
+
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | PakVision AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/settings.css') }}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+          <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/theme.css') }}">
+
+<script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+
+
+
+</head>
+
+<body>
+
+<div class="settings-container">
+
+    <!-- Top Bar -->
+    <div class="topbar">
+
+        <a href="/dashboard" class="back">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back To Dashboard
+        </a>
+
+        <h1>Settings</h1>
+
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="settings-layout">
+
+        <!-- Sidebar -->
+        <div class="settings-sidebar">
+
+            
+
+           
+
+            <button class="setting-nav"
+                    onclick="showSection('appearance', this)">
+                <i class="fa-solid fa-palette"></i>
+                Appearance
+            </button>
+
+            <button class="setting-nav"
+                    onclick="showSection('notifications', this)">
+                <i class="fa-solid fa-bell"></i>
+                Notifications
+            </button>
+
+            <button class="setting-nav"
+                    onclick="showSection('preferences', this)">
+                <i class="fa-solid fa-sliders"></i>
+                Preferences
+            </button>
+
+            
+
+        </div>
+
+
+        <!-- Settings Content -->
+        
+
+
+           <div class="settings-content" id="settingsContent">
+
+           
+
+                 
+                     
+                 
+
+
+
+            <!-- APPEARANCE -->
+            <section id="appearance" class="settings-section">
+
+                <div class="section-heading">
+
+                    <h2>Appearance</h2>
+
+                    <p>
+                        Customize the appearance of PakVision AI.
+                    </p>
+
+                </div>
+
+
+                <div class="option-card">
+
+                    <div class="option-info">
+
+                        <div class="option-icon">
+                            <i class="fa-solid fa-moon"></i>
+                        </div>
+
+                        <div>
+                            <h3>Dark Mode</h3>
+
+                            <p>
+                                Use the dark green PakVision AI interface.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input type="checkbox"
+                               id="darkMode"
+                               checked
+                               onchange="toggleDarkMode()">
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+                  
+            </section>
+
+
+
+            <!-- NOTIFICATIONS -->
+            <section id="notifications" class="settings-section">
+
+                <div class="section-heading">
+
+                    <h2>Notifications</h2>
+
+                    <p>
+                        Control system notifications.
+                    </p>
+
+                </div>
+
+
+                <div class="option-card">
+
+                    <div class="option-info">
+
+                        <div class="option-icon">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+
+                        <div>
+                            <h3>Scan Notifications</h3>
+
+                            <p>
+                                Show notification after image scanning.
+                            </p>
+                        </div>
+
+                    </div>
+
+                     <label class="switch">
+
+            <input
+                type="checkbox"
+                id="scanNotifications"
+                checked
+            >
+
+            <span class="slider"></span>
+
+        </label>
+
+                </div>
+
+
+                
+
+            </section>
+
+
+
+            <!-- PREFERENCES -->
+            <section id="preferences" class="settings-section">
+
+                <div class="section-heading">
+
+                    <h2>Preferences</h2>
+
+                    <p>
+                        Configure your application preferences.
+                    </p>
+
+                </div>
+
+
+                <div class="form-card">
+
+                    <div class="input-group">
+
+                        <label>Default Scan Accuracy</label>
+
+                        <select>
+
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Results Display</label>
+
+                        <select>
+
+                            <option>Detailed</option>
+                            <option>Compact</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button type="button" id="savePreferences" class="save-btn">
+                  <i class="fa-solid fa-floppy-disk"></i>
+                 Save Preferences
+                    </button>
+
+
+
+                </div>
+
+            </section>
+
+
+
+            
+
+
+
+                            
+
+          
+
+<script src="{{ url_for('static', filename='js/settings.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#081b29;
+color:#fff;
+}
+
+.container{
+width:95%;
+margin:auto;
+padding:30px 0;
+}
+
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:35px;
+padding-bottom:15px;
+border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+
+
+.back{
+text-decoration:none;
+color:#00ff99;
+font-weight:600;
+font-size:18px;
+}
+
+.topbar h1{
+font-size:32px;
+color:#00ff99;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-bottom:30px;
+}
+
+.card{
+background:#112240;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card i{
+font-size:40px;
+color:#00ff99;
+margin-bottom:15px;
+}
+
+.card h2{
+font-size:30px;
+margin-bottom:10px;
+}
+
+.card p{
+color:#ccc;
+}
+
+
+
+
+.table-box{
+background:#112240;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#00ff99;
+color:#000;
+padding:15px;
+}
+
+td{
+padding:15px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+td img{
+width:60px;
+height:60px;
+border-radius:8px;
+object-fit:cover;
+}
+
+.delete{
+background:red;
+color:white;
+padding:8px 15px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.view{
+background:#00ff99;
+color:black;
+padding:8px 15px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+margin-right:8px;
+} 
+
+.history-content{
+display:grid;
+grid-template-columns:260px 1fr;
+gap:30px;
+align-items:start;
+}
+
+.left-panel .cards{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.right-panel{
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.search-box input{
+width:350px;
+}
+
+.table-box{
+width:100%;
+}
+
+@media(max-width:900px){
+
+.history-content{
+
+grid-template-columns:1fr;
+
+}
+
+.search-box input{
+
+width:100%;
+
+}
+
+}
+
+

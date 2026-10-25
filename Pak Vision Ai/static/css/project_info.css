@@ -1,0 +1,418 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #031d15;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    padding: 0 28px 40px;
+}
+
+
+/* ================= TOP BAR ================= */
+
+.topbar {
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 255, 153, 0.25);
+    margin-bottom: 25px;
+}
+
+.topbar h1 {
+    color: #00ff99;
+    font-size: 22px;
+}
+
+.back {
+    color: #00ff99;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.back i {
+    margin-right: 6px;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 30px;
+
+    background: #0a3024;
+
+    border: 1px solid rgba(0, 255, 153, 0.35);
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    margin-bottom: 22px;
+}
+
+.hero-icon {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #00ff99;
+
+    color: #031d15;
+
+    border-radius: 50%;
+
+    font-size: 40px;
+
+    flex-shrink: 0;
+}
+
+.hero-content h2 {
+    color: #00ff99;
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.hero-content h3 {
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.hero-content p {
+    color: #b8d8ce;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 850px;
+}
+
+
+/* ================= SECTION TITLE ================= */
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+.section-title i {
+    color: #00ff99;
+    font-size: 18px;
+}
+
+.section-title h2 {
+    color: #00ff99;
+    font-size: 19px;
+}
+
+
+/* ================= INFO CARD ================= */
+
+.info-card,
+.tech-card {
+    background: #0a3024;
+
+    border: 1px solid rgba(0, 255, 153, 0.28);
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    margin-bottom: 22px;
+}
+
+.info-card p {
+    color: #b8d8ce;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+
+/* ================= FEATURES ================= */
+
+.features-section {
+    margin-bottom: 22px;
+}
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.feature-card {
+    background: #09291f;
+
+    border: 1px solid rgba(0, 255, 153, 0.25);
+
+    border-radius: 13px;
+
+    padding: 22px;
+
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #00ff99;
+
+    box-shadow: 0 8px 25px rgba(0, 255, 153, 0.12);
+}
+
+.feature-icon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #00ff99;
+
+    color: #031d15;
+
+    border-radius: 10px;
+
+    margin-bottom: 14px;
+
+    font-size: 18px;
+}
+
+.feature-card h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    color: #9dc5b7;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* ================= STEPS ================= */
+
+.steps {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.step {
+    display: flex;
+    gap: 13px;
+
+    padding: 18px;
+
+    background: #09291f;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(0, 255, 153, 0.2);
+}
+
+.step span {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #00ff99;
+
+    color: #031d15;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.step h3 {
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.step p {
+    color: #9dc5b7;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* ================= TECHNOLOGY ================= */
+
+.tech-grid {
+    display: grid;
+
+    grid-template-columns: repeat(8, 1fr);
+
+    gap: 10px;
+}
+
+.tech {
+    padding: 17px 8px;
+
+    text-align: center;
+
+    background: #09291f;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(0, 255, 153, 0.2);
+}
+
+.tech i {
+    display: block;
+
+    color: #00ff99;
+
+    font-size: 22px;
+
+    margin-bottom: 9px;
+}
+
+.tech span {
+    color: #c6e6dc;
+    font-size: 10px;
+}
+
+
+/* ================= PURPOSE ================= */
+
+.purpose {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: #0a3024;
+
+    border: 1px solid rgba(0, 255, 153, 0.3);
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+}
+
+.purpose-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: #00ff99;
+
+    color: #031d15;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+}
+
+.purpose h2 {
+    color: #00ff99;
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.purpose p {
+    color: #b8d8ce;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    border-top: 1px solid rgba(0, 255, 153, 0.18);
+
+    color: #6f9d8d;
+
+    font-size: 11px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .container {
+        padding: 0 15px 30px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .purpose {
+        align-items: flex-start;
+    }
+}

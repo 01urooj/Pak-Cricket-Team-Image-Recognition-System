@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Statistics | PakVision AI</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/statistics.css') }}">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/theme.css') }}">
+
+      <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Top Bar -->
+
+    <div class="topbar">
+
+        <a href="/dashboard" class="back">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back To Dashboard
+        </a>
+
+        <h1>Statistics</h1>
+
+    </div>
+
+    <!-- Charts -->
+
+    <div class="chart-grid">
+
+        <!-- Recognition Activity -->
+
+        <div class="card large-card">
+
+            <h3>Recognition Activity</h3>
+
+            <canvas id="activityChart"></canvas>
+
+        </div>
+
+        <!-- Players Distribution -->
+
+        <div class="card small-card">
+
+            <h3>Players Distribution</h3>
+
+            <canvas id="distributionChart"></canvas>
+
+        </div>
+
+    </div>
+
+    <!-- Accuracy -->
+
+    <div class="card accuracy-card">
+
+        <h3>Recognition Accuracy</h3>
+
+        <canvas id="accuracyChart"></canvas>
+
+    </div>
+
+</div>
+
+
+
+<script id="stats-data" type="application/json">
+{
+    "playerNames": {{ players | map(attribute='player_name') | list | tojson }},
+    "playerScans": {{ players | map(attribute='scans') | list | tojson }},
+    "activityDates": {{ activityDates | tojson }},
+    "activityScans": {{ activityScans | tojson }},
+    "averageAccuracy": {{ avg_accuracy | tojson }},
+    "totalScans": {{ total_scans | tojson }}
+}
+</script>
+
+
+
+
+
+
+
+
+
+<script src="{{ url_for('static', filename='js/statistics.js') }}"></script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+

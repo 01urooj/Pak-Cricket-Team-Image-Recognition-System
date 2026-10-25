@@ -1,0 +1,592 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #061c17;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.settings-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 20px 40px;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.topbar {
+    height: 55px;
+    border-bottom: 1px solid rgba(0, 255, 153, 0.25);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.topbar h1 {
+    color: #00ff99;
+    font-size: 21px;
+}
+
+.back {
+    color: #00ff99;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.back i {
+    margin-right: 6px;
+}
+
+
+/* =========================
+   LAYOUT
+========================= */
+
+.settings-layout {
+    display: flex;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.settings-sidebar {
+    width: 245px;
+    min-width: 245px;
+
+    background: #0c2b22;
+
+    border: 1px solid rgba(0, 255, 153, 0.25);
+
+    border-radius: 12px;
+
+    padding: 18px;
+}
+
+
+.profile-box {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 12px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+
+.profile-icon {
+    width: 62px;
+    height: 62px;
+
+    margin: auto;
+    margin-bottom: 10px;
+
+    border-radius: 50%;
+
+    background: #00ff99;
+    color: #06231b;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+.profile-box h3 {
+    font-size: 15px;
+}
+
+.profile-box p {
+    color: #7cae9e;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+
+.setting-nav {
+    width: 100%;
+
+    border: none;
+    background: transparent;
+
+    color: #b8d7cd;
+
+    padding: 12px;
+
+    margin-top: 5px;
+
+    border-radius: 7px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+
+.setting-nav i {
+    width: 22px;
+    color: #00ff99;
+}
+
+
+.setting-nav:hover,
+.setting-nav.active {
+    background: rgba(0, 255, 153, 0.12);
+    color: #00ff99;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.settings-content {
+    flex: 1;
+
+    background: #0c2b22;
+
+    border: 1px solid rgba(0, 255, 153, 0.25);
+
+    border-radius: 12px;
+
+    padding: 25px;
+}
+
+
+.settings-section {
+    display: none;
+}
+
+.settings-section.active {
+    display: block;
+}
+
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    color: #00ff99;
+    font-size: 19px;
+    margin-bottom: 6px;
+}
+
+.section-heading p {
+    color: #7cae9e;
+    font-size: 12px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-card {
+    background: #09241d;
+
+    border: 1px solid rgba(0, 255, 153, 0.15);
+
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+
+.input-group label {
+    display: block;
+
+    color: #00ff99;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+}
+
+
+.input-wrapper {
+    position: relative;
+}
+
+
+.input-wrapper i {
+    position: absolute;
+
+    left: 13px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #00ff99;
+
+    font-size: 13px;
+}
+
+
+input,
+select {
+    width: 100%;
+
+    height: 42px;
+
+    background: #061c17;
+
+    border: 1px solid rgba(0, 255, 153, 0.22);
+
+    border-radius: 7px;
+
+    color: white;
+
+    padding: 0 13px;
+
+    outline: none;
+
+    font-size: 12px;
+}
+
+
+.input-wrapper input {
+    padding-left: 38px;
+}
+
+
+input:focus,
+select:focus {
+    border-color: #00ff99;
+    box-shadow: 0 0 8px rgba(0,255,153,0.12);
+}
+
+
+select {
+    cursor: pointer;
+}
+
+
+/* =========================
+   OPTION CARDS
+========================= */
+
+.option-card {
+    background: #09241d;
+
+    border: 1px solid rgba(0, 255, 153, 0.15);
+
+    border-radius: 10px;
+
+    padding: 17px;
+
+    margin-bottom: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.option-info {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+
+.option-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 8px;
+
+    background: rgba(0,255,153,0.1);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #00ff99;
+}
+
+
+.option-info h3 {
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+
+.option-info p {
+    color: #759b90;
+    font-size: 11px;
+}
+
+
+/* =========================
+   SWITCH
+========================= */
+
+.switch {
+    position: relative;
+
+    width: 43px;
+    height: 22px;
+}
+
+
+.switch input {
+    display: none;
+}
+
+
+.slider {
+    position: absolute;
+
+    inset: 0;
+
+    background: #25453c;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+
+.slider:before {
+    content: "";
+
+    position: absolute;
+
+    width: 16px;
+    height: 16px;
+
+    left: 3px;
+    top: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transition: .3s;
+}
+
+
+.switch input:checked + .slider {
+    background: #00ff99;
+}
+
+
+.switch input:checked + .slider:before {
+    transform: translateX(21px);
+    background: #06231b;
+}
+
+
+/* =========================
+   SAVE BUTTON
+========================= */
+
+.save-btn {
+    background: #00ff99;
+
+    color: #06231b;
+
+    border: none;
+
+    padding: 11px 20px;
+
+    border-radius: 7px;
+
+    font-weight: bold;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+
+.save-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 18px rgba(0,255,153,0.2);
+}
+
+
+.save-btn i {
+    margin-right: 6px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 750px) {
+
+    .settings-layout {
+        flex-direction: column;
+    }
+
+    .settings-sidebar {
+        width: 100%;
+    }
+
+    .settings-content {
+        width: 100%;
+    }
+
+}
+
+/* ==========================================
+   LIGHT MODE
+   ========================================== */
+
+html.light-mode body {
+    background: #f2f7f5;
+    color: #14231f;
+}
+
+html.light-mode .settings-container {
+    background: #f2f7f5;
+}
+
+html.light-mode .topbar {
+    border-bottom-color: #c8ddd5;
+}
+
+html.light-mode .topbar h1 {
+    color: #00a86b;
+}
+
+html.light-mode .back {
+    color: #00a86b;
+}
+
+html.light-mode .settings-sidebar,
+html.light-mode .settings-content {
+    background: #ffffff;
+    border-color: #c8ddd5;
+}
+
+html.light-mode .profile-box {
+    border-bottom-color: #e1ebe7;
+}
+
+html.light-mode .profile-box h3 {
+    color: #14231f;
+}
+
+html.light-mode .profile-box p {
+    color: #71827c;
+}
+
+html.light-mode .setting-nav {
+    color: #52635d;
+}
+
+html.light-mode .setting-nav:hover,
+html.light-mode .setting-nav.active {
+    background: #e5f8f0;
+    color: #009e67;
+}
+
+html.light-mode .settings-content {
+    color: #14231f;
+}
+
+html.light-mode .section-heading h2 {
+    color: #009e67;
+}
+
+html.light-mode .section-heading p {
+    color: #71827c;
+}
+
+html.light-mode .form-card,
+html.light-mode .option-card {
+    background: #f7faf9;
+    border-color: #d6e5df;
+}
+
+html.light-mode .input-group label {
+    color: #009e67;
+}
+
+html.light-mode input,
+html.light-mode select {
+    background: #ffffff;
+    color: #14231f;
+    border-color: #c8ddd5;
+}
+
+html.light-mode input:focus,
+html.light-mode select:focus {
+    border-color: #00b879;
+}
+
+html.light-mode .option-info h3 {
+    color: #14231f;
+}
+
+html.light-mode .option-info p {
+    color: #71827c;
+}
+
+html.light-mode .option-icon {
+    background: #e5f8f0;
+    color: #009e67;
+}
+
+
+/* =========================================
+   SETTINGS CONTENT
+   Hidden until a setting is selected
+========================================= */
+
+.settings-content {
+    display: none;
+}
+
+/* Show content after clicking
+   Appearance / Notifications / Preferences */
+
+.settings-content.active {
+    display: block;
+}
+
+
+/* Individual sections */
+
+.settings-section {
+    display: none;
+}
+
+.settings-section.active {
+    display: block;
+}

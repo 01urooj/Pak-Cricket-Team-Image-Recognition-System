@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Info | PakVision AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/project_info.css') }}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/theme.css') }}">
+
+<script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= TOP BAR ================= -->
+
+    <div class="topbar">
+
+        <a href="/dashboard" class="back">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back To Dashboard
+        </a>
+
+        <h1>Project Info</h1>
+
+    </div>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-icon">
+            <i class="fa-solid fa-eye"></i>
+        </div>
+
+        <div class="hero-content">
+
+            <h2>Image Recognition System</h2>
+
+            <h3>Pakistan Cricket Player Recognition System</h3>
+
+            <p>
+                This is an intelligent image recognition system
+                designed to identify Pakistan cricket players from their
+                images using Artificial Intelligence and Computer Vision.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="info-card">
+
+        <div class="section-title">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <h2>About The Project</h2>
+
+        </div>
+
+        <p>
+            This uploaded cricket player's image and
+            predicts the player's identity. The system also provides
+            additional information such as role, age, city and recognition
+            accuracy.
+        </p>
+
+        <p>
+            All scan results are automatically stored in the database,
+            allowing users to view their scan history, player statistics
+            and detection information.
+        </p>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features-section">
+
+        <div class="section-title">
+
+            <i class="fa-solid fa-star"></i>
+
+            <h2>Key Features</h2>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-image"></i>
+                </div>
+
+                <h3>Image Recognition</h3>
+
+                <p>
+                    Upload a cricket player's image and let the AI
+                    identify the player.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+
+                <h3>Player Information</h3>
+
+                <p>
+                    View player role, age, city and recognition accuracy.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>
+
+                <h3>Scan History</h3>
+
+                <p>
+                    Automatically save and manage previous player scans.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <h3>Statistics</h3>
+
+                <p>
+                    Analyze detection activity, players and recognition
+                    accuracy through interactive charts.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <h3>Players Database</h3>
+
+                <p>
+                    Browse detected Pakistan cricket players and their
+                    latest information.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+
+                <h3>Database Integration</h3>
+
+                <p>
+                    Scan results and player information are securely
+                    stored using SQLite database technology.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= HOW IT WORKS ================= -->
+
+    <section class="info-card">
+
+        <div class="section-title">
+
+            <i class="fa-solid fa-gears"></i>
+
+            <h2>How It Works</h2>
+
+        </div>
+
+
+        <div class="steps">
+
+
+            <div class="step">
+
+                <span>01</span>
+
+                <div>
+                    <h3>Upload Image</h3>
+
+                    <p>
+                        Select or drag and drop a cricket player's image.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <span>02</span>
+
+                <div>
+                    <h3>AI Analysis</h3>
+
+                    <p>
+                        The trained computer vision model analyzes the
+                        uploaded image.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <span>03</span>
+
+                <div>
+                    <h3>Player Detection</h3>
+
+                    <p>
+                        PakVision AI identifies the most likely player
+                        and calculates confidence.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="step">
+
+                <span>04</span>
+
+                <div>
+                    <h3>Save Result</h3>
+
+                    <p>
+                        The scan result is automatically saved into the
+                        database for future reference.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= TECHNOLOGY ================= -->
+
+    <section class="tech-card">
+
+        <div class="section-title">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h2>Technology Stack</h2>
+
+        </div>
+
+
+        <div class="tech-grid">
+
+            <div class="tech">
+                <i class="fa-brands fa-python"></i>
+                <span>Python</span>
+            </div>
+
+            <div class="tech">
+                <i class="fa-solid fa-flask"></i>
+                <span>Flask</span>
+            </div>
+
+            <div class="tech">
+                <i class="fa-solid fa-brain"></i>
+                <span>AI / ML</span>
+            </div>
+
+            <div class="tech">
+                <i class="fa-solid fa-camera"></i>
+                <span>Computer Vision</span>
+            </div>
+
+            <div class="tech">
+                <i class="fa-solid fa-database"></i>
+                <span>SQLite</span>
+            </div>
+
+            <div class="tech">
+                <i class="fa-brands fa-js"></i>
+                <span>JavaScript</span>
+            </div>
+
+            <div class="tech">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML5</span>
+            </div>
+
+            <div class="tech">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS3</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PURPOSE ================= -->
+
+    <section class="purpose">
+
+        <div class="purpose-icon">
+            <i class="fa-solid fa-bullseye"></i>
+        </div>
+
+        <div>
+
+            <h2>Project Purpose</h2>
+
+            <p>
+                The purpose of this is to demonstrate how
+                Artificial Intelligence and Computer Vision can be used
+                to recognize and analyze cricket players through images
+                while providing a simple and modern user experience.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    
+
+</div>
+
+<script src="{{ url_for('static', filename='js/project_info.js') }}"></script>
+
+
+
+</body>
+</html>
